@@ -5,7 +5,8 @@ const servico = new Schema({
 
   salaoID: {
     type: mongoose.Types.ObjectId,
-    ref: 'Salao'
+    ref: 'Salao',
+    required: true
   },
   titulo: {
     type: String,
