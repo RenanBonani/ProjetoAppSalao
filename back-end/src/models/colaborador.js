@@ -74,7 +74,7 @@ const colaborador = new Schema({
     },
     cpfCnpj: {
       type: String,
-      required: [true, 'Pais é obrigatorio.']
+      required: [true, 'CPF/CNPJ é obrigatorio.']
     },
     banco: {
       type: String,
