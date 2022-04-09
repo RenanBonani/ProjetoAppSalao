@@ -2,36 +2,44 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const colaborador = new Schema({
+
   nome: {
     type: String,
     required: [true, 'Nome é obrigatorio.']
   },
+
   dataNascimento: {
     type: String,
     required: [true, 'Data de Nascimento é obrigatorio.']
   },
+
   sexo: {
     type: String,
     enum: ['M', 'F'],
     required: [true, 'Sexo é obrigatorio.']
   },
+
   foto: {
     type: String,
     default: null
   },
+
   status: {
     type: String,
     enum: ['A', 'I'],
     default: 'A'
   },
+
   email: {
     type: String,
     required: [true, 'E-mail é obrigatorio.']
   },
+
   senha: {
     type: String,
     required: [true, 'Senha é obrigatorio.']
   },
+
   telefone: {
     type: String,
     required: [true, 'Telefone é obrigatorio.']
@@ -58,13 +66,12 @@ const colaborador = new Schema({
       required: [true, 'Pais é obrigatorio.']
     }
   },
-  contaBancaria: {
 
+  contaBancaria: {
     titular: {
       type: String,
       required: [true, 'Titular é obrigatorio.']
     },
-
     cpfCnpj: {
       type: String,
       required: [true, 'Pais é obrigatorio.']
@@ -73,12 +80,10 @@ const colaborador = new Schema({
       type: String,
       required: [true, 'Banco é obrigatorio.']
     },
-
     tipo: {
       type: String,
       required: [true, 'Tipo é obrigatorio.']
     },
-
     agencia: {
       type: String,
       required: [true, 'Agencia é obrigatorio.']
@@ -92,10 +97,11 @@ const colaborador = new Schema({
       required: [true, 'Digito verificador é obrigatorio.']
     }
   },
+
   dataCadastro: {
     type: Date,
     default: Date.now
-  }
+  },
 
   recipientId: {
     type: String,
